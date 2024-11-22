@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMASSS</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="grupo-texto">
+        <h1>¡Bienvenidos a cine universal!</h1>
+        <h3>-- Menú --</h3>
+        <p>Dinos tu edad y te recomendaremos una pelicula adecuada</p>
+
+        <div>
+            <h3>EDAD: </h3>
+            <input id="edad" type="number">
+        </div>
+        
+    <h6>--</h6>
+    
+        <div>
+            <button onclick="drama()">Drama</button>
+            <button onclick="comedia()">Comedia</button>
+            <button onclick="musical()">Musical</button>
+            <button onclick="crimen()">Crimen</button>
+        </div>
+        <h3>Te recomendamos: </h3>
+
+        <h3 id="texto_alarma"></h3>
+    </div>
+<script>
+    function drama(){
+    let elemento_respuesta = document.getElementById("texto_alarma");
+
+    let elemento_edad = document.getElementById("edad");
+
+    let edad = elemento_edad.value;
+
+    if(edad < 13)
+        {
+        elemento_respuesta.textContent = "casa blanca"
+        }
+
+        else{
+            if(edad >= 13 && edad < 16){
+                elemento_respuesta.textContent = "The Shawshank Redemption"
+            }else{
+                elemento_respuesta.textContent = "Taxi driver"
+            }
+        }
+    
+}
+
+function comedia(){
+    let elemento_respuesta = document.getElementById("texto_alarma");
+
+    let elemento_edad = document.getElementById("edad");
+
+    let edad = elemento_edad.value;
+
+    if(edad < 13)
+        {
+        elemento_respuesta.textContent = "Back to the Future"
+        }
+
+        else{
+            if(edad >= 13 && edad < 16){
+                elemento_respuesta.textContent = "The Truman show"
+            }else{
+                elemento_respuesta.textContent = "The wolf of wall street"
+            }
+        }
+    
+}
+
+function musical(){
+    let elemento_respuesta = document.getElementById("texto_alarma");
+
+    let elemento_edad = document.getElementById("edad");
+
+    let edad = elemento_edad.value;
+
+    if(edad < 13)
+        {
+        elemento_respuesta.textContent = "La La Land"
+        }
+
+        else{
+            if(edad >= 13 && edad < 16){
+                elemento_respuesta.textContent = "Los miserables"
+            }else{
+                elemento_respuesta.textContent = "The Rocky Horror Picture Show"
+            }
+        }
+    
+}
+
+function crimen(){
+    let elemento_respuesta = document.getElementById("texto_alarma");
+
+    let elemento_edad = document.getElementById("edad");
+
+    let edad = elemento_edad.value;
+
+    if(edad < 13)
+        {
+        elemento_respuesta.textContent = "No hay peliculas para esta edad"
+        }
+
+        else{
+            if(edad >= 13 && edad < 16){
+                elemento_respuesta.textContent = "Breaking Bad"
+            }else{
+                elemento_respuesta.textContent = "Texas Chainsaw Massacre"
+            }
+        }
+    
+}
+</script>
+
+</body>
+</html>
